@@ -1,13 +1,25 @@
 {
   "license": "MIT",
   "scripts": {
-    "serve": "webpack serve --progress"
+    "serve": "webpack serve --progress --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@rc-ex/core": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/core?es5",
+    "@rc-ex/debug": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/debug?es5",
+    "@rc-ex/rcsdk": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/rcsdk?es5",
+    "@rc-ex/ws": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/ws?es5",
+    "@ringcentral/sdk": "^4.4.1",
+    "es6-promise": "^4.2.8"
   },
   "devDependencies": {
     "@types/node": "^14.14.34",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "dotenv-override-true": "^6.2.2",
     "gts": "^3.1.0",
     "html-webpack-plugin": "^5.3.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
     "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
@@ -15,8 +27,5 @@
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "yarn-upgrade-all": "^0.5.4"
-  },
-  "dependencies": {
-    "es6-promise": "^4.2.8"
   }
 }

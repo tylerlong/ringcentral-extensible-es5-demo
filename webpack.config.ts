@@ -1,3 +1,4 @@
+/* eslint-disable node/no-unpublished-require */
 /* eslint-disable node/no-unpublished-import */
 import dotenv from 'dotenv-override-true';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -28,8 +29,17 @@ const config = {
     }),
     new ProvidePlugin({
       Promise: ['es6-promise', 'Promise'],
+      process: 'process/browser',
     }),
   ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    fallback: {
+      crypto: require.resolve('crypto-browserify'),
+      buffer: require.resolve('buffer'),
+      stream: require.resolve('stream-browserify'),
+    },
+  },
 };
 
 export default config;
