@@ -1,8 +1,7 @@
-/* eslint-disable node/no-unpublished-require */
 /* eslint-disable node/no-unpublished-import */
 import dotenv from 'dotenv-override-true';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import {DefinePlugin, ProvidePlugin} from 'webpack';
+import {DefinePlugin} from 'webpack';
 
 const config = {
   mode: 'development',
@@ -20,7 +19,6 @@ const config = {
       },
       {
         test: /\.js$/,
-        // exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -46,19 +44,7 @@ const config = {
     new DefinePlugin({
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
-    // new ProvidePlugin({
-    //   Promise: ['es6-promise', 'Promise'],
-    //   // process: 'process/browser',
-    // }),
   ],
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    // fallback: {
-    //   crypto: require.resolve('crypto-browserify'),
-    //   buffer: require.resolve('buffer'),
-    //   stream: require.resolve('stream-browserify'),
-    // },
-  },
 };
 
 export default config;

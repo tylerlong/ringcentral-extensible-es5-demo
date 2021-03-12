@@ -4,7 +4,6 @@
     "serve": "webpack serve --progress --host 0.0.0.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@rc-ex/core": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/core?es5",
     "@rc-ex/debug": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/debug?es5",
     "@rc-ex/rcsdk": "https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/rcsdk?es5",
@@ -12,21 +11,17 @@
     "@ringcentral/sdk": "^4.4.1"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/register": "^7.13.8",
     "@types/node": "^14.14.34",
     "@types/webpack": "^4.41.26",
     "babel-loader": "^8.2.2",
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.0",
     "dotenv-override-true": "^6.2.2",
-    "es6-promise": "^4.2.8",
     "gts": "^3.1.0",
     "html-webpack-plugin": "4.5.2",
     "isomorphic-fetch": "^3.0.0",
-    "process": "^0.11.10",
-    "stream-browserify": "^3.0.0",
     "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
