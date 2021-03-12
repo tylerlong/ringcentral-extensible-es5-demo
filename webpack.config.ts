@@ -8,7 +8,7 @@ const config = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/index.ts',
-  target: ['web', 'es5'],
+  target: 'web',
   module: {
     rules: [
       {
@@ -16,6 +16,25 @@ const config = {
         exclude: /node_modules/,
         use: {
           loader: 'ts-loader',
+        },
+      },
+      {
+        test: /\.js$/,
+        // exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    browsers: ['IE >= 11'],
+                  },
+                },
+              ],
+            ],
+          },
         },
       },
     ],
@@ -29,16 +48,16 @@ const config = {
     }),
     new ProvidePlugin({
       Promise: ['es6-promise', 'Promise'],
-      process: 'process/browser',
+      // process: 'process/browser',
     }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    fallback: {
-      crypto: require.resolve('crypto-browserify'),
-      buffer: require.resolve('buffer'),
-      stream: require.resolve('stream-browserify'),
-    },
+    // fallback: {
+    //   crypto: require.resolve('crypto-browserify'),
+    //   buffer: require.resolve('buffer'),
+    //   stream: require.resolve('stream-browserify'),
+    // },
   },
 };
 

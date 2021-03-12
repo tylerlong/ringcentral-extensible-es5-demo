@@ -33,5 +33,6 @@ const rc = new RingCentral();
   });
   await rc.installExtension(webSocketExtension);
 
-  await rc.restapi().account().extension().get();
+  const r = await rc.restapi().account().extension().get();
+  alert(JSON.stringify(r, null, 2));
 })();
