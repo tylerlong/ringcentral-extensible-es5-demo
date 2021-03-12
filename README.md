@@ -10,3 +10,15 @@ yarn add https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/exten
 yarn add https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/rcsdk?es5
 yarn add https://gitpkg.now.sh/ringcentral/ringcentral-extensible/packages/extensions/debug?es5
 ```
+
+
+## Run this demo project
+
+Rename `.env.sample` to `.env` and specify credentials
+
+```
+yarn install
+yarn serve
+```
+
+Go to http://127.0.0.1:8080

@@ -1,3 +1,6 @@
+import '@babel/polyfill';
+import 'isomorphic-fetch';
+
 import RingCentral from '@rc-ex/core';
 import RcSdkExtension from '@rc-ex/rcsdk';
 import DebugExtension from '@rc-ex/debug';

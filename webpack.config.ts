@@ -46,10 +46,10 @@ const config = {
     new DefinePlugin({
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
-    new ProvidePlugin({
-      Promise: ['es6-promise', 'Promise'],
-      // process: 'process/browser',
-    }),
+    // new ProvidePlugin({
+    //   Promise: ['es6-promise', 'Promise'],
+    //   // process: 'process/browser',
+    // }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
